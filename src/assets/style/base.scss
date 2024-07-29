@@ -1,0 +1,48 @@
+.el-segmented {
+	padding: 6px;
+
+	&:deep(.el-segmented__item) {
+		padding: 8px 0;
+		margin-right: 5px;
+
+		& + .el-segmented__item {
+			margin-left: 5px;
+			margin-right: 0;
+		}
+	}
+}
+
+a {
+	color: initial;
+	text-decoration: none;
+
+	&:hover {
+		color: initial;
+		text-decoration: none;
+	}
+}
+
+.el-button.is-text {
+	&:active {
+		background-color: transparent !important;
+	}
+
+	&:hover {
+		background-color: transparent !important;
+	}
+
+	&:focus-visible {
+		outline: unset !important;
+	}
+}
+.el-input .el-input__inner {
+	font-family: var(--el-font-family);
+}
+
+.el-dropdown {
+	outline: unset;
+
+	&:deep(.el-tooltip__trigger:focus-visible) {
+		outline: unset;
+	}
+}

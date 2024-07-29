@@ -1,0 +1,17 @@
+.page {
+	position: fixed;
+	inset: 0;
+	background-color: #F7F8FB;
+}
+
+.page-container {
+	height: calc(100vh - $page-header-bar-height);
+	box-sizing: border-box;
+	overflow-y: auto;
+}
+
+.sub-title {
+	margin: 0;
+	color: $sub-title-color;
+	white-space: nowrap;
+}

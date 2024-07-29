@@ -1,0 +1,64 @@
+@mixin omitText($line: 2) {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin scrollBar($width: 8px) {
+  &::-webkit-scrollbar {
+		width: $width;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #d1d1d1;
+		border-radius: 8px;
+
+		&:hover {
+			background-color: #bbbbbb;
+		}
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #e6e6e6;
+		border-radius: 8px;
+	}
+}
+
+@mixin slideAnimation() {
+	.slide-bottom-enter-active {
+		transition: all 0.3s ease-out;
+	}
+	
+	.slide-bottom-leave-active {
+		transition: all 0.3s ease-in;
+	}
+	
+	.slide-bottom-enter-from {
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+	
+	.slide-bottom-leave-to {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	.slide-top-enter-active {
+		transition: all 0.3s ease-out;
+	}
+	
+	.slide-top-leave-active {
+		transition: all 0.3s ease-in;
+	}
+	
+	.slide-top-enter-from {
+		opacity: 0;
+		transform: translateY(50%);
+	}
+	
+	.slide-top-leave-to {
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+}
